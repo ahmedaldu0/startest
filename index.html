@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechSolutions - IT Services</title>
+    <title>TechSolutions - خدمات تكنولوجيا المعلومات</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -85,6 +85,1249 @@
         }
         
         .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 5px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-left: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-right: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+        }
+        
+        .hero-content {
+            max-width: 700px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--secondary);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            background-color: var(--primary);
+            color: white;
+            font-size: 2.5rem;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-content p {
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+        }
+        
+        .testimonials-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-slide {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            display: none;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            position: relative;
+        }
+        
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+        }
+        
+        .testimonial-text::before {
+            top: -20px;
+            right: -15px;
+        }
+        
+        .testimonial-text::after {
+            bottom: -40px;
+            left: -15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .testimonial-role {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #cbd5e1;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .testimonial-dot.active {
+            background-color: var(--primary);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-left: 10px;
+            color: var(--primary);
+            width: 20px;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--secondary);
+        }
+        
+        .service-details h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-details ul {
+            margin-right: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .service-details li {
+            margin-bottom: 10px;
+        }
+        
+        /* Live Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+        
+        .chat-button {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .chat-button:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.1);
+        }
+        
+        .chat-button i {
+            font-size: 24px;
+        }
+        
+        .chat-container {
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            max-height: 400px;
+        }
+        
+        .chat-container.active {
+            display: flex;
+            animation: slideUp 0.3s ease;
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .chat-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-header h3 {
+            margin: 0;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .chat-messages {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .message.bot {
+            background-color: #f1f5f9;
+            align-self: flex-start;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .message.user {
+            background-color: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .chat-input input {
+            flex-grow: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        .chat-input button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 0 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .chat-input button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                padding: 40px 0;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .chat-container {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><i class="fas fa-laptop-code"></i>TechSolutions</a>
+                <ul class="nav-links">
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#testimonials">آراء العملاء</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>خدمات تكنولوجيا المعلومات للشركات الحديثة</h1>
+                <p>نقدم حلول تكنولوجيا متطورة لمساعدة عملك على الازدهار في العصر الرقمي. من حلول دفع Starlink إلى تكوينات MikroTik، نحن نغطي جميع احتياجاتك.</p>
+                <a href="#services" class="btn">استكشف خدماتنا</a>
+                <a href="#contact" class="btn btn-outline" style="margin-right: 15px;">اتصل بنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="clients-count">0</div>
+                    <div class="stat-label">عميل راضي</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="projects-count">0</div>
+                    <div class="stat-label">مشروع مكتمل</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="support-count">0</div>
+                    <div class="stat-label">تذكرة دعم</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="experience-count">0</div>
+                    <div class="stat-label">سنوات من الخبرة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title text-center">خدماتنا</h2>
+            <p class="text-center">نحن متخصصون في تقديم حلول تكنولوجيا المعلومات الشاملة المصممة خصيصًا لاحتياجات عملك.</p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>حلول دفع Starlink</h3>
+                        <p>نقدم حلول دفع سلسة لخدمات Starlink، مما يضمن اتصال إنترنت ساتلي دون انقطاع لعملك.</p>
+                        <a href="#" class="btn service-btn" data-service="starlink">المزيد</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>برامج الهواتف المحمولة</h3>
+                        <p>من تثبيت نظام ROM المخصص إلى استكشاف الأخطاء وإصلاحها، نحن نتعامل مع جميع احتياجات برامج الهاتف المحمول لأجهزة iOS و Android.</p>
+                        <a href="#" class="btn service-btn" data-service="mobile">المزيد</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>الخدمات عن بُعد</h3>
+                        <p>احصل على دعم فوري لمشاكل تكنولوجيا المعلومات مع خدمات المساعدة عن بُعد الآمنة. نحن هناك عندما تحتاجنا، أينما كنت.</p>
+                        <a href="#" class="btn service-btn" data-service="remote">المزيد</a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-router"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>خدمات MikroTik</h3>
+                        <p>تكوين وإدارة وتحسين جهاز التوجيه MikroTik professionally لضمان عمل شبكتك بأقصى أداء.</p>
+                        <a href="#" class="btn service-btn" data-service="mikrotik">المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title text-center">من نحن</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>نقدم حلول تكنولوجيا المعلومات المبتكرة</h2>
+                    <p>تأسست TechSolutions في عام 2015 بهدف تزويد الشركات بخدمات تكنولوجيا موثوقة ومبتكرة. يتمتع فريقنا من المحترفين المعتمدين بخبرة واسعة في مجالات تكنولوجيا المعلومات المختلفة.</p>
+                    <p>نفخر بتقديم حلول مخصصة تعالج تحدياتك المحددة وتساعدك على تحقيق أهداف عملك. يضمن نهجنا المرتكز على العميل أننا نفهم احتياجاتك ونقدم نتائج تتجاوز التوقعات.</p>
+                    <p>سواء كنت شركة صغيرة أو مؤسسة كبيرة، لدينا الخبرة لتعزيز بنية تكنولوجيا المعلومات الخاصة بك وتبسيط عملياتك.</p>
+                    <a href="#contact" class="btn">اتصل بنا</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="فريقنا يعمل معًا">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title text-center">ما يقوله عملاؤنا</h2>
+            <p class="text-center">لا تأخذ كلمنا فقط - استمع من عملائنا الراضين.</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-slide active">
+                    <p class="testimonial-text">قامت TechSolutions بتحويل بنية الشبكة الخاصة بنا مع خبرتهم في MikroTik. تحسنت سرعة الإنترنت لدينا بنسبة 200٪ ولم يكن لدينا أي توقف منذ التنفيذ.</p>
+                    <div class="testimonial-author">سارة جونسون</div>
+                    <div class="testimonial-role">CTO, TechGrowth Inc.</div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">حل دفع Starlink أنقذ مكتبنا البعيد من مشاكل الاتصال. الآن يمكننا التركيز على عملنا دون القلق بشأن مدفوعات الإنترنت والانقطاعات.</p>
+                    <div class="testimonial-author">مايكل تشين</div>
+                    <div class="testimonial-role">مدير العمليات, RemoteWork Solutions</div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">فريق الدعم عن بُعد الخاص بهم مذهل! قاموا بحل مشكلة البرامج لدينا في أقل من 15 دقيقة دون الحاجة إلى زيارة مكتبنا. موصى به بشدة لأي عمل.</p>
+                    <div class="testimonial-author">إيميلي رودريجيز</div>
+                    <div class="testimonial-role">CEO, Digital Marketing Pros</div>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-slide="0"></div>
+                    <div class="testimonial-dot" data-slide="1"></div>
+                    <div class="testimonial-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title text-center">اتصل بنا</h2>
+            <p class="text-center">هل لديك أسئلة أو مستعد للبدء؟ تواصل معنا اليوم!</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>ابقى على تواصل</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 شارع التكنولوجيا, المدينة الرقمية</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@techsolutions.com</p>
+                        <p><i class="fas fa-clock"></i> الإثنين-الجمعة: 9ص - 5م</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">اسمك</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">بريدك الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">الخدمة المهتم بها</label>
+                            <select id="service" name="service">
+                                <option value="">اختر خدمة</option>
+                                <option value="starlink">حلول دفع Starlink</option>
+                                <option value="mobile">برامج الهواتف المحمولة</option>
+                                <option value="remote">الخدمات عن بُعد</option>
+                                <option value="mikrotik">خدمات MikroTik</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">رسالتك</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TechSolutions</h3>
+                    <p>تقدم خدمات تكنولوجيا المعلومات المتطورة للشركات والأفراد منذ عام 2015.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#services">الخدمات</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#testimonials">آراء العملاء</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>الخدمات</h3>
+                    <ul>
+                        <li><a href="#" class="service-btn" data-service="starlink">دفع Starlink</a></li>
+                        <li><a href="#" class="service-btn" data-service="mobile">برامج الهاتف المحمول</a></li>
+                        <li><a href="#" class="service-btn" data-service="remote">الخدمات عن بُعد</a></li>
+                        <li><a href="#" class="service-btn" data-service="mikrotik">خدمات MikroTik</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 TechSolutions. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Detail Modals -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="service-details">
+                <!-- Content will be inserted by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-button">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>دردش معنا</h3>
+                <button class="close-chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot">
+                    مرحبا! كيف يمكننا مساعدتك اليوم؟
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="اكتب رسالتك...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('header');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile nav when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Service details data
+        const serviceDetails = {
+            starlink: {
+                title: "حلول دفع Starlink",
+                description: "<p>ضمان حلول دفع Starlink الخاصة بنا أن خدمة الإنترنت الساتلي الخاصة بك تظل نشطة دون انقطاع. نحن نتعامل مع تعقيدات معالجة الدفع لخدمات Starlink، خاصة في المناطق التي قد تكون فيها طرق الدفع المباشرة صعبة.</p><p>مع خدمتنا، يمكنك الاستمتاع باتصال سلس دون القلق بشأن مشاكل الدفع أو انقطاع الخدمة.</p>",
+                features: [
+                    "معالجة دفع آمنة لخدمات Starlink",
+                    "جدولة الدفع التلقائي لمنع انقطاع الخدمة",
+                    "دعم متعدد العملات للعملاء الدوليين",
+                    "سجل الدفع المفصل والإيصالات",
+                    "دعم على مدار الساعة طوال أيام الأسبوع لمشاكل الدفع"
+                ]
+            },
+            mobile: {
+                title: "برامج الهواتف المحمولة",
+                description: "<p>نقدم خدمات برامج محمولة شاملة لكل من أجهزة iOS و Android. تغطي خبرتنا كل شيء من تثبيت البرامج والتحديثات إلى استكشاف الأخطاء وإصلاحها والتخصيص.</p><p>سواء كنت بحاجة إلى تثبيت ROM مخصص أو إصلاح برنامج أو تحسين الأداء، فإن فنيينا لديهم المهارات لجعل جهازك يعمل بشكل مثالي.</p>",
+                features: [
+                    "تثبيت وتكوين ROM مخصص",
+                    "تحديثات وتخفيضات نظام التشغيل",
+                    "استكشاف أخطاء البرامج وإصلاحها",
+                    "حلول استعادة البيانات والنسخ الاحتياطي",
+                    "تحسين الأداء والتخصيص",
+                    "تثبيت التطبيقات وتكوينها"
+                ]
+            },
+            remote: {
+                title: "الخدمات عن بُعد",
+                description: "<p>توفر خدمات تكنولوجيا المعلومات عن بُعد دعمًا فوريًا لمشاكل التكنولوجيا الخاصة بك، بغض النظر عن مكان وجودك. باستخدام أدوات الوصول عن بُعد الآمنة، يمكن لفنينا تشخيص المشكلات وحلها بسرعة وكفاءة.</p><p>هذه الخدمة مثالية للشركات والأفراد الذين يحتاجون إلى دعم فني سريع دون أوقات الانتظار أو التكاليف المرتبطة بالزيارات الميدانية.</p>",
+                features: [
+                    "دعم سطح المكتب عن بُعد آمن",
+                    "أوقات استجابة سريعة (عادة في غضون 15 دقيقة)",
+                    "تثبيت البرامج وتكوينها",
+                    "إزالة الفيروسات والبرامج الضارة",
+                    "تحسين النظام والصيانة",
+                    "استكشاف مشاكل الشبكة وإصلاحها",
+                    "مساعدة في النسخ الاحتياطي واستعادة البيانات"
+                ]
+            },
+            mikrotik: {
+                title: "خدمات MikroTik",
+                description: "<p>تشمل خدمات MikroTik الخاصة بنا تكوين جهاز التوجيه وإدارته وتحسينه professionally لضمان عمل شبكتك بأقصى أداء. لدينا خبرة واسعة مع أجهزة MikroTik ويمكننا تخصيص حلول لتلبية احتياجاتك الخاصة.</p><p>من الإعداد الأساسي إلى التكوينات المتقدمة، يمكننا مساعدتك في تحقيق أقصى استفادة من معدات MikroTik الخاصة بك.</p>",
+                features: [
+                    "الإعداد الأولي وتكوين جهاز التوجيه MikroTik",
+                    "تحسين الشبكة للأداء والأمان",
+                    "تكوين VPN (PPTP, L2TP, SSTP, OpenVPN)",
+                    "تكوين جدار الحماية والأمان",
+                    "إعداد QoS (جودة الخدمة)",
+                    "تكوين نقطة الوصول اللاسلكية",
+                    "حزم الصيانة والدعم المستمر"
+                ]
+            }
+        };
+        
+        // Service modal functionality
+        const serviceModal = document.getElementById('serviceModal');
+        const serviceDetailsContent = document.querySelector('.service-details');
+        const closeModal = document.querySelector('.close-modal');
+        const serviceButtons = document.querySelectorAll('.service-btn');
+        
+        serviceButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const service = button.getAttribute('data-service');
+                const details = serviceDetails[service];
+                
+                if (details) {
+                    let featuresHtml = '';
+                    details.features.forEach(feature => {
+                        featuresHtml += `<li>${feature}</li>`;
+                    });
+                    
+                    serviceDetailsContent.innerHTML = `
+                        <h2>${details.title}</h2>
+                        ${details.description}
+                        <h3>ميزات الخدمة:</h3>
+                        <ul>${featuresHtml}</ul>
+                        <div style="text-align: center; margin-top: 30px;">
+                            <a href="#contact" class="btn">احصل على هذه الخدمة</a>
+                        </div>
+                    `;
+                    
+                    serviceModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            serviceModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === serviceModal) {
+                serviceModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real application, you would send the form data to a server here
+            // For this example, we'll just show an alert and reset the form
+            
+            alert('شكرًا لك على رسالتك! سوف نعود إليك قريبًا.');
+            contactForm.reset();
+        });
+        
+        // Testimonial carousel
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            testimonialSlides.forEach(slide => slide.classList.remove('active'));
+            testimonialDots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonialSlides[index].classList.add('active');
+            testimonialDots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto-advance testimonials
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % testimonialSlides.length;
+            showSlide(currentSlide);
+        }, 5000);
+        
+        // Live chat functionality
+        const chatButton = document.querySelector('.chat-button');
+        const chatContainer = document.querySelector('.chat-container');
+        const closeChat = document.querySelector('.close-chat');
+        const chatInput = document.querySelector('.chat-input input');
+        const chatSend = document.querySelector('.chat-input button');
+        const chatMessages = document.querySelector('.chat-messages');
+        
+        chatButton.addEventListener('click', () => {
+            chatContainer.classList.toggle('active');
+        });
+        
+        closeChat.addEventListener('click', () => {
+            chatContainer.classList.remove('active');
+        });
+        
+        function addMessage(text, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(isUser ? 'user' : 'bot');
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        chatSend.addEventListener('click', () => {
+            if (chatInput.value.trim() !== '') {
+                addMessage(chatInput.value, true);
+                
+                // Simulate bot response after a short delay
+                setTimeout(() => {
+                    addMessage("شكرًا على رسالتك! سوف يعود إليك فريقنا shortly.");
+                }, 1000);
+                
+                chatInput.value = '';
+            }
+        });
+        
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && chatInput.value.trim() !== '') {
+                chatSend.click();
+            }
+        });
+        
+        // Animated stats counter
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // Start counters when stats section is in view
+        const statsSection = document.querySelector('.stats');
+        let counted = false;
+        
+        function checkScroll() {
+            const sectionPos = statsSection.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+            
+            if (sectionPos < screenPos && !counted) {
+                animateValue("clients-count", 0, 250, 2000);
+                animateValue("projects-count", 0, 500, 2000);
+                animateValue("support-count", 0, 1200, 2000);
+                animateValue("experience-count", 0, 8, 2000);
+                counted = true;
+            }
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        // Initial check in case the section is already in view
+        checkScroll();
+    </script>
+</body>
+</html>        .section-title {
             position: relative;
             margin-bottom: 50px;
             font-size: 2.2rem;
