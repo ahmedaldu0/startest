@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechConnect Services</title>
+    <title>TechConnect - خدمات تقنية متكاملة</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -27,6 +27,7 @@
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
+            direction: rtl;
         }
         
         .container {
@@ -62,7 +63,7 @@
         }
         
         .logo i {
-            margin-right: 10px;
+            margin-left: 10px;
         }
         
         .nav-links {
@@ -71,7 +72,7 @@
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin-right: 30px;
         }
         
         .nav-links a {
@@ -330,19 +331,19 @@
             .nav-links {
                 position: fixed;
                 top: 80px;
-                left: -100%;
+                right: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
                 background-color: white;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                transition: left 0.3s;
+                transition: right 0.3s;
                 gap: 30px;
             }
             
             .nav-links.active {
-                left: 0;
+                right: 0;
             }
             
             .hero h1 {
@@ -366,10 +367,10 @@
             <nav>
                 <a href="#" class="logo"><i class="fas fa-globe"></i>TechConnect</a>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
@@ -381,9 +382,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Expert Technology Solutions for Modern Needs</h1>
-            <p>We provide specialized services to keep you connected and your systems running smoothly with cutting-edge solutions.</p>
-            <a href="#services" class="btn">Explore Services</a>
+            <h1>حلول تكنولوجية متطورة لاحتياجاتك الحديثة</h1>
+            <p>نقدم خدمات متخصصة لإبقائك متصلاً وأنظمة تعمل بسلاسة مع حلول cutting-edge.</p>
+            <a href="#services" class="btn">استكشف الخدمات</a>
         </div>
     </section>
 
@@ -391,44 +392,44 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>We offer a range of specialized technology services to meet your needs</p>
+                <h2>خدماتنا</h2>
+                <p>نقدم مجموعة من الخدمات التقنية المتخصصة لتلبية احتياجاتك</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-satellite"></i>
                     </div>
-                    <h3>Starlink Payment</h3>
-                    <p>Seamless payment solutions for your Starlink services with secure transaction processing.</p>
-                    <a href="starlink.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>دفع ستارلينك</h3>
+                    <p>حلول دفع سلسة لخدمات ستارلينك الخاصة بك مع معالجة معاملات آمنة.</p>
+                    <a href="starlink.html" class="service-link">المزيد من المعلومات <i class="fas fa-arrow-left"></i></a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Mobile Phone Software</h3>
-                    <p>Comprehensive software solutions for mobile devices including updates, customization, and troubleshooting.</p>
-                    <a href="mobile-software.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>برامج الهواتف المحمولة</h3>
+                    <p>حلول برمجية شاملة للأجهزة المحمولة بما في ذلك التحديثات والتخصيص واستكشاف الأخطاء وإصلاحها.</p>
+                    <a href="mobile-software.html" class="service-link">المزيد من المعلومات <i class="fas fa-arrow-left"></i></a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-laptop-house"></i>
                     </div>
-                    <h3>Remote Services</h3>
-                    <p>Professional remote support for troubleshooting, maintenance, and system optimization.</p>
-                    <a href="remote-services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>الخدمات عن بعد</h3>
+                    <p>دعم عن بعد احترافي لاستكشاف الأخطاء وإصلاحها والصيانة وتحسين النظام.</p>
+                    <a href="remote-services.html" class="service-link">المزيد من المعلومات <i class="fas fa-arrow-left"></i></a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-router"></i>
                     </div>
-                    <h3>MikroTik Services</h3>
-                    <p>Expert configuration, management, and optimization of MikroTik networking equipment.</p>
-                    <a href="mikrotik.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>خدمات ميكروتيك</h3>
+                    <p>تهيئة وخبرة إدارة وتحسين لمعدات شبكات ميكروتيك.</p>
+                    <a href="mikrotik.html" class="service-link">المزيد من المعلومات <i class="fas fa-arrow-left"></i></a>
                 </div>
             </div>
         </div>
@@ -439,13 +440,13 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About Our Company</h2>
-                    <p>TechConnect is a team of dedicated professionals with expertise in various technology domains. We pride ourselves on delivering high-quality services tailored to our clients' specific needs.</p>
-                    <p>With years of experience in the industry, we understand the importance of reliable technology solutions in today's connected world.</p>
-                    <a href="#" class="btn">Contact Us</a>
+                    <h2>عن شركتنا</h2>
+                    <p>TechConnect هو فريق من المحترفين الم dedicados مع الخبرة في various technology domains. We pride ourselves on delivering high-quality services tailored to our clients' specific needs.</p>
+                    <p>مع سنوات of experience في المجال، we understand the importance of reliable technology solutions in today's connected world.</p>
+                    <a href="#" class="btn">اتصل بنا</a>
                 </div>
                 <div class="about-image">
-                    Technology Experts
+                    خبراء التكنولوجيا
                 </div>
             </div>
         </div>
@@ -457,30 +458,30 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>TechConnect</h3>
-                    <p>Providing cutting-edge technology solutions with reliability and expertise.</p>
+                    <p>تقديم حلول تكنولوجية cutting-edge مع الموثوقية والخبرة.</p>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Services</h3>
+                    <h3>الخدمات</h3>
                     <ul>
-                        <li><a href="starlink.html">Starlink Payment</a></li>
-                        <li><a href="mobile-software.html">Mobile Phone Software</a></li>
-                        <li><a href="remote-services.html">Remote Services</a></li>
-                        <li><a href="mikrotik.html">MikroTik Services</a></li>
+                        <li><a href="starlink.html">دفع ستارلينك</a></li>
+                        <li><a href="mobile-software.html">برامج الهواتف المحمولة</a></li>
+                        <li><a href="remote-services.html">الخدمات عن بعد</a></li>
+                        <li><a href="mikrotik.html">خدمات ميكروتيك</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
+                    <h3>اتصل بنا</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 شارع التكنولوجيا، المدينة الرقمية</li>
                         <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
                         <li><i class="fas fa-envelope"></i> info@techconnect.example</li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Follow Us</h3>
+                    <h3>تابعنا</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -491,7 +492,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 TechConnect. All rights reserved.</p>
+                <p>&copy; 2023 TechConnect. كل الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
