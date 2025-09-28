@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechConnect - خدمات تقنية متكاملة</title>
+    <title>الكـلس تكنولوجي - حلول تكنولوجية متطورة</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -50,20 +50,25 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            height: 50px;
+            width: auto;
+            margin-left: 10px;
+        }
+        
+        .logo-text {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-left: 10px;
         }
         
         .nav-links {
@@ -357,6 +362,24 @@
             .about-content {
                 flex-direction: column;
             }
+            
+            .logo-img {
+                height: 40px;
+            }
+            
+            .logo-text {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-text {
+                display: none;
+            }
+            
+            .logo-img {
+                height: 45px;
+            }
         }
     </style>
 </head>
@@ -365,7 +388,11 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo"><i class="fas fa-globe"></i>TechConnect</a>
+                <a href="#" class="logo-container">
+                    <!-- استبدل "logo.png" باسم ملف الشعار الفعلي -->
+                    <img src="logo.png" class="logo-img">
+                    <span class="logo-text">الكـلس تكنولوجي</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="#">الرئيسية</a></li>
                     <li><a href="#services">خدماتنا</a></li>
@@ -383,7 +410,7 @@
     <section class="hero">
         <div class="container">
             <h1>حلول تكنولوجية متطورة لاحتياجاتك الحديثة</h1>
-            <p>نقدم خدمات متخصصة لإبقائك متصلاً وأنظمة تعمل بسلاسة مع حلول cutting-edge.</p>
+            <p>نقدم خدمات متخصصة لإبقائك متصلاً وأنظمة تعمل بسلاسة مع حلول احترافية.</p>
             <a href="#services" class="btn">استكشف الخدمات</a>
         </div>
     </section>
@@ -400,8 +427,8 @@
                     <div class="service-icon">
                         <i class="fas fa-satellite"></i>
                     </div>
-                    <h3>دفع ستارلينك</h3>
-                    <p>حلول دفع سلسة لخدمات ستارلينك الخاصة بك مع معالجة معاملات آمنة.</p>
+                    <h3>دفع فواتير ستارلينك</h3>
+                    <p>حلول دفع سلسة لخدمات ستارلينك الخاصة بك مع معالجة المشاكل والفواتير المرتفعة.</p>
                     <a href="starlink.html" class="service-link">المزيد من المعلومات <i class="fas fa-arrow-left"></i></a>
                 </div>
                 
@@ -409,8 +436,8 @@
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>برامج الهواتف المحمولة</h3>
-                    <p>حلول برمجية شاملة للأجهزة المحمولة بما في ذلك التحديثات والتخصيص واستكشاف الأخطاء وإصلاحها.</p>
+                    <h3>حذف حساب جوجل بالايميلي أو السيريال</h3>
+                    <p>نحن مصدر مباشر لخدمات فك قفل الهواتف وتفعيلات الأدوات والبوكسات وشحن الألعاب.</p>
                     <a href="mobile-software.html" class="service-link">المزيد من المعلومات <i class="fas fa-arrow-left"></i></a>
                 </div>
                 
@@ -427,9 +454,9 @@
                     <div class="service-icon">
                         <i class="fas fa-router"></i>
                     </div>
-                    <h3>خدمات ميكروتيك</h3>
-                    <p>تهيئة وخبرة إدارة وتحسين لمعدات شبكات ميكروتيك.</p>
-                    <a href="mikrotik.html" class="service-link">المزيد من المعلومات <i class="fas fa-arrow-left"></i></a>
+                    <h3>برمجة نظام الكروت ستارلينك</h3>
+                    <p>تهيئة وإدارة وبرمجة نظام الكروت في ميكروتك وبرمجة الأنظمة بدون ميكروتك.</p>
+                    <a href="mikrotik.html" class="service-link">اطلب الخدمة الآن <i class="fas fa-arrow-left"></i></a>
                 </div>
             </div>
         </div>
@@ -440,10 +467,10 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>عن شركتنا</h2>
-                    <p>TechConnect هو فريق من المحترفين الم dedicados مع الخبرة في various technology domains. We pride ourselves on delivering high-quality services tailored to our clients' specific needs.</p>
-                    <p>مع سنوات of experience في المجال، we understand the importance of reliable technology solutions in today's connected world.</p>
-                    <a href="#" class="btn">اتصل بنا</a>
+                    <h2>من نحن</h2>
+                    <p>الكـلس تكنولوجي هو فريق من المحترفين المختصين ذوي الخبرة في مختلف المجالات التقنية. نحن نفتخر بتقديم خدمات عالية الجودة مصممة خصيصًا لتلبية احتياجات عملائنا.</p>
+                    <p>مع سنوات من الخبرة في المجال، نفهم أهمية الحلول التكنولوجية الموثوقة في عالم اليوم المتصل.</p>
+                    <a href="#contact" class="btn">اتصل بنا</a>
                 </div>
                 <div class="about-image">
                     خبراء التكنولوجيا
@@ -457,8 +484,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>TechConnect</h3>
-                    <p>تقديم حلول تكنولوجية cutting-edge مع الموثوقية والخبرة.</p>
+                    <h3>الكـلس تكنولوجي</h3>
+                    <p>تقديم حلول تكنولوجية متطورة مع الموثوقية والخبرة.</p>
                 </div>
                 
                 <div class="footer-column">
@@ -476,7 +503,7 @@
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 123 شارع التكنولوجيا، المدينة الرقمية</li>
                         <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@techconnect.example</li>
+                        <li><i class="fas fa-envelope"></i> info@alkls-tech.example</li>
                     </ul>
                 </div>
                 
@@ -492,7 +519,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 TechConnect. كل الحقوق محفوظة.</p>
+                <p>&copy; 2023 الكـلس تكنولوجي. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
