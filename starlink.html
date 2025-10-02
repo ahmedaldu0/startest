@@ -4,24 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>باقات استارلينك - PurplePay</title>
+    <title>Starlink Alkls Tech - سداد فواتير استارلينك</title>
+    <meta name="description" content="اشترِ باقات استارلينك بأفضل الأسعار في السودان. خدمة عملاء متوفرة 24/7. دفع آمن وسريع.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/earlyaccess/droidarabickufi.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4e8bed;
-            --primary-dark: #3a6dc8;
-            --secondary-color: #6ba1f7;
+            --primary-color: #1a6aa2;
+            --primary-dark: #135a8a;
+            --secondary-color: #3a8ccc;
             --accent-color: #ff6b6b;
-            --light-bg: #f8fafd;
+            --light-bg: #f0f8ff;
             --dark-text: #2c3e50;
-            --info-color: #4e8bed;
+            --info-color: #1a6aa2;
             --success-color: #27ae60;
-            --blue-gradient: linear-gradient(135deg, #4e8bed, #6ba1f7);
-            --blue-gradient-hover: linear-gradient(135deg, #3a6dc8, #4e8bed);
-            --card-shadow: 0 10px 25px rgba(78, 139, 237, 0.15);
-            --card-shadow-hover: 0 15px 35px rgba(78, 139, 237, 0.25);
+            --primary-gradient: linear-gradient(135deg, #1a6aa2, #3a8ccc);
+            --primary-gradient-hover: linear-gradient(135deg, #135a8a, #1a6aa2);
+            --card-shadow: 0 10px 25px rgba(26, 106, 162, 0.15);
+            --card-shadow-hover: 0 15px 35px rgba(26, 106, 162, 0.25);
         }
 
         body {
@@ -31,12 +32,12 @@
             padding-top: 20px;
             padding-bottom: 80px;
             background-image: 
-                radial-gradient(circle at 5% 10%, rgba(78, 139, 237, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 95% 80%, rgba(107, 161, 247, 0.05) 0%, transparent 20%);
+                radial-gradient(circle at 5% 10%, rgba(26, 106, 162, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 95% 80%, rgba(58, 140, 204, 0.05) 0%, transparent 20%);
         }
 
         .header {
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
             color: white;
             border-radius: 20px;
             padding: 25px;
@@ -82,11 +83,12 @@
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(78, 139, 237, 0.1);
+            box-shadow: 0 5px 15px rgba(26, 106, 162, 0.1);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(78, 139, 237, 0.1);
+            border: 1px solid rgba(26, 106, 162, 0.1);
+            cursor: pointer;
         }
 
         .mobile-card::before {
@@ -96,7 +98,7 @@
             right: 0;
             width: 5px;
             height: 0;
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
             transition: height 0.3s ease;
         }
 
@@ -134,20 +136,20 @@
         }
 
         .btn-select {
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
             color: white;
             border: none;
             border-radius: 30px;
             padding: 8px 20px;
             font-size: 0.95rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(78, 139, 237, 0.25);
+            box-shadow: 0 4px 10px rgba(26, 106, 162, 0.25);
         }
 
         .btn-select:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(78, 139, 237, 0.35);
-            background: var(--blue-gradient-hover);
+            box-shadow: 0 6px 15px rgba(26, 106, 162, 0.35);
+            background: var(--primary-gradient-hover);
             color: white;
         }
 
@@ -215,23 +217,6 @@
             border-radius: 12px;
         }
 
-        .promo-active {
-            animation: pulse 2s infinite;
-            border: 2px solid var(--primary-color);
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(78, 139, 237, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 12px rgba(78, 139, 237, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(78, 139, 237, 0);
-            }
-        }
-        
         .why-us {
             background: white;
             border-radius: 20px;
@@ -249,7 +234,7 @@
             right: 0;
             width: 100%;
             height: 5px;
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
         }
         
         .why-us-header {
@@ -270,7 +255,7 @@
             transform: translateX(50%);
             width: 80px;
             height: 3px;
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
             border-radius: 3px;
         }
         
@@ -284,12 +269,12 @@
         }
         
         .benefit-item:hover {
-            background: rgba(78, 139, 237, 0.05);
+            background: rgba(26, 106, 162, 0.05);
             transform: translateX(-5px);
         }
         
         .benefit-icon {
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
             color: white;
             width: 50px;
             height: 50px;
@@ -299,7 +284,7 @@
             justify-content: center;
             margin-left: 20px;
             flex-shrink: 0;
-            box-shadow: 0 5px 15px rgba(78, 139, 237, 0.25);
+            box-shadow: 0 5px 15px rgba(26, 106, 162, 0.25);
         }
         
         .benefit-text {
@@ -319,66 +304,6 @@
             padding: 5px 10px;
             border-radius: 8px;
             display: inline-block;
-        }
-        
-        /* عداد التنازلي */
-        .countdown-timer {
-            background: white;
-            border-radius: 20px;
-            padding: 25px;
-            margin: 30px 0;
-            box-shadow: var(--card-shadow);
-            border-right: 5px solid var(--info-color);
-            animation: pulse-blue 2s infinite;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .countdown-title {
-            text-align: center;
-            color: var(--info-color);
-            font-weight: bold;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .countdown-item {
-            background: rgba(78, 139, 237, 0.1);
-            border-radius: 12px;
-            padding: 12px 15px;
-            min-width: 80px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .countdown-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(78, 139, 237, 0.2);
-        }
-
-        .countdown-value {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--info-color);
-            display: block;
-        }
-
-        .countdown-label {
-            font-size: 0.9rem;
-            color: #6c757d;
-            margin-top: 5px;
-        }
-        
-        @keyframes pulse-blue {
-            0% {
-                box-shadow: 0 0 0 0 rgba(78, 139, 237, 0.3);
-            }
-            70% {
-                box-shadow: 0 0 0 12px rgba(78, 139, 237, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(78, 139, 237, 0);
-            }
         }
         
         /* تصنيفات الباقات */
@@ -423,35 +348,35 @@
             transform: translateX(50%);
             width: 80px;
             height: 3px;
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
             border-radius: 3px;
         }
         
         .accordion-button {
             font-weight: bold;
             padding: 15px;
-            border: 1px solid rgba(78, 139, 237, 0.1);
+            border: 1px solid rgba(26, 106, 162, 0.1);
             margin-bottom: 10px;
             border-radius: 10px !important;
         }
         
         .accordion-button:not(.collapsed) {
-            background-color: rgba(78, 139, 237, 0.1);
+            background-color: rgba(26, 106, 162, 0.1);
             color: var(--primary-color);
             font-weight: bold;
-            box-shadow: 0 3px 10px rgba(78, 139, 237, 0.1);
+            box-shadow: 0 3px 10px rgba(26, 106, 162, 0.1);
         }
         
         .accordion-button:focus {
             box-shadow: none;
-            border-color: rgba(78, 139, 237, 0.3);
+            border-color: rgba(26, 106, 162, 0.3);
         }
         
         .accordion-body {
             padding: 15px;
-            background: rgba(78, 139, 237, 0.03);
+            background: rgba(26, 106, 162, 0.03);
             border-radius: 0 0 10px 10px;
-            border: 1px solid rgba(78, 139, 237, 0.1);
+            border: 1px solid rgba(26, 106, 162, 0.1);
             border-top: none;
         }
         
@@ -481,15 +406,6 @@
                 width: 100%;
                 text-align: center;
                 padding: 10px;
-            }
-            
-            .countdown-item {
-                min-width: 65px;
-                padding: 10px;
-            }
-            
-            .countdown-value {
-                font-size: 1.4rem;
             }
             
             .why-us, .faq-section {
@@ -524,8 +440,8 @@
         }
         
         .alert-info {
-            background-color: rgba(78, 139, 237, 0.1);
-            border-color: rgba(78, 139, 237, 0.2);
+            background-color: rgba(26, 106, 162, 0.1);
+            border-color: rgba(26, 106, 162, 0.2);
             color: var(--dark-text);
             border-radius: 15px;
             padding: 20px;
@@ -533,38 +449,24 @@
         }
         
         .btn-success {
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
             border: none;
             border-radius: 30px;
             padding: 12px 30px;
             font-weight: bold;
-            box-shadow: 0 5px 15px rgba(78, 139, 237, 0.3);
+            box-shadow: 0 5px 15px rgba(26, 106, 162, 0.3);
             transition: all 0.3s ease;
         }
         
         .btn-success:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(78, 139, 237, 0.4);
-            background: var(--blue-gradient-hover);
+            box-shadow: 0 8px 20px rgba(26, 106, 162, 0.4);
+            background: var(--primary-gradient-hover);
         }
         
         .fixed-bottom {
             padding: 15px;
             background: linear-gradient(to top, var(--light-bg) 70%, transparent);
-        }
-        
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 1000;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
         }
         
         .back-to-top {
@@ -575,12 +477,12 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: var(--blue-gradient);
+            background: var(--primary-gradient);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 5px 15px rgba(78, 139, 237, 0.3);
+            box-shadow: 0 5px 15px rgba(26, 106, 162, 0.3);
             transition: all 0.3s ease;
             opacity: 0;
             visibility: hidden;
@@ -593,7 +495,46 @@
         
         .back-to-top:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(78, 139, 237, 0.4);
+            box-shadow: 0 8px 20px rgba(26, 106, 162, 0.4);
+        }
+
+        /* تحسينات إضافية */
+        .package-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .package-feature {
+            background: rgba(26, 106, 162, 0.1);
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .customer-name {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .customer-rating {
+            color: #ffc107;
+        }
+        
+        /* تحسينات جديدة */
+        .card-highlight {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.02);
         }
     </style>
 </head>
@@ -606,162 +547,152 @@
             <p class="mb-0 mt-2">اختر فاتورتك المناسبة واحصل على أفضل الأسعار</p>
         </div>
 
-        <!-- سعر صرف الدولار -->
-        <div class="exchange-rate">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h4 class="mb-1">سعر الصرف الحالي: <span class="text-danger">1$ = 3850 SDG</span></h4>
-                    <p class="mb-0 text-muted">آخر تحديث: اليوم</p>
-                </div>
-                <div class="col-md-4 text-md-left text-center mt-2 mt-md-0">
-                    <span class="badge bg-primary py-2 px-3">أسعار مخفضة</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- عداد التنازلي للعرض -->
-        <div class="countdown-timer">
-            <h4 class="countdown-title"><i class="fas fa-bolt me-2"></i>عرض خاص لفترة محدودة</h4>
-            <div class="d-flex justify-content-around text-center">
-                <div class="countdown-item">
-                    <span class="countdown-value days">00</span>
-                    <span class="countdown-label">أيام</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value hours">00</span>
-                    <span class="countdown-label">ساعات</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value minutes">00</span>
-                    <span class="countdown-label">دقائق</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value seconds">00</span>
-                    <span class="countdown-label">ثواني</span>
-                </div>
-            </div>
-        </div>
-
         <!-- عرض الموبايل -->
         <div class="package-category">
             <h4 class="section-title"> الفواتير المتاحة</h4>
             
             <!-- أفضل قيمة -->
-            <div class="mobile-card promo-active">
-                <span class="best-value-badge">أفضل قيمة</span>
+            <div class="mobile-card" data-price="385000" data-name="اليمن">
+                <span class="best-value-badge">تنشيط جديد</span>
                 <div class="mobile-header">
-                    <h5 class="package-name mb-0"> اليمن</h5>
-                    <span class="final-price">100 USD</span>
+                    <h5 class="package-name mb-0"> تغيير الفاتورة او تنشيط جديد</h5>
+                    <span class="final-price">85 USD</span>
+                </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
                 </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">385,000 SDG</span>
-                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20اليمن" class="btn btn-select">اختر الباقة</a>
+                    <span class="price-sdg">300,000 SDG</span>
+                    <a href="https://api.whatsapp.com/send?phone=249969661277&amp;text=أريد%20شراء%20باقة%20تنشيط جديد" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
             
             <!-- الباقات الأخرى -->
-            <div class="mobile-card">
+            <div class="mobile-card" data-price="395000" data-name="الاوربي">
                 <div class="mobile-header">
                     <h5 class="package-name mb-0"> الاوربي </h5>
                     <span class="final-price">89€</span>
                 </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
+                </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">395,000 SDG</span>
-                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20الاوربي" class="btn btn-select">اختر الباقة</a>
+                    <span class="price-sdg">406,000 SDG</span>
+                    <a href="https://api.whatsapp.com/send?phone=249969661277&amp;text=أريد%20شراء%20باقة%20الاوربي" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
             
-            <div class="mobile-card">
+            <div class="mobile-card" data-price="400000" data-name="اليمن">
                 <div class="mobile-header">
-                    <h5 class="package-name mb-0">ملاوي </h5>
-                    <span class="final-price">MWK 170,000</span>
+                    <h5 class="package-name mb-0">اليمن </h5>
+                    <span class="final-price">100$</span>
+                </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
                 </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">400,000 SDG</span>
-                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20ملاوي" class="btn btn-select">اختر الباقة</a>
+                    <span class="price-sdg">388,000 SDG</span>
+                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20اليمن" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
             
-            <div class="mobile-card">
+            <div class="mobile-card" data-price="430000" data-name="زامبيا">
                 <div class="mobile-header">
                     <h5 class="package-name mb-0">زامبيا </h5>
                     <span class="final-price">ZMW 2,500</span>
                 </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
+                </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">430,000 SDG</span>
-                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20زامبيا" class="btn btn-select">اختر الباقة</a>
+                    <span class="price-sdg">418,000 SDG</span>
+                    <a href="https://api.whatsapp.com/send?phone=249969661277&amp;text=أريد%20شراء%20باقة%20زامبيا" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
             
-            <div class="mobile-card">
+            <div class="mobile-card" data-price="390000" data-name="رواندا">
                 <div class="mobile-header">
                     <h5 class="package-name mb-0">رواندا </h5>
                     <span class="final-price">RWF 128,000</span>
                 </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
+                </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">390,000 SDG</span>
-                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20رواندا" class="btn btn-select">اختر الباقة</a>
+                    <span class="price-sdg">350,000 SDG</span>
+                    <a href="https://api.whatsapp.com/send?phone=249969661277&amp;text=أريد%20شراء%20باقة%20رواندا" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
             
-            <div class="mobile-card">
+            <div class="mobile-card" data-price="420000" data-name="كينيا">
                 <div class="mobile-header">
                     <h5 class="package-name mb-0">كينيا </h5>
                     <span class="final-price">KES 14,000</span>
                 </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
+                </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">420,000 SDG</span>
-                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20كينيا" class="btn btn-select">اختر الباقة</a>
+                    <span class="price-sdg">400,000 SDG</span>
+                    <a href="https://api.whatsapp.com/send?phone=249969661277&amp;text=أريد%20شراء%20باقة%20كينيا" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
             
-            <div class="mobile-card">
+            <div class="mobile-card" data-price="390000" data-name="موزانبيق">
                 <div class="mobile-header">
                     <h5 class="package-name mb-0">موزانبيق </h5>
                     <span class="final-price">MZN 6,000</span>
                 </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
+                </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">390,000 SDG</span>
+                    <span class="price-sdg">350,000 SDG</span>
                     <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20موزانبيق" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
             
-            <div class="mobile-card">
+            <div class="mobile-card" data-price="150000" data-name="نيجيري">
                 <div class="mobile-header">
-                    <h5 class="package-name mb-0">الاوربي</h5>
-                    <span class="final-price">72€</span>
+                    <h5 class="package-name mb-0">نيجيري</h5>
+                    <span class="final-price">49ngn</span>
+                </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
                 </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">380,000 SDG</span>
-                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20الاورbi" class="btn btn-select">اختر الباقة</a>
+                    <span class="price-sdg">150,000 SDG</span>
+                    <a href="https://api.whatsapp.com/send?phone=249969661277&amp;text=أريد%20شراء%20باقة%20الاوربي" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
             
-            <div class="mobile-card">
+            <div class="mobile-card" data-price="360000" data-name="ياباني">
                 <div class="mobile-header">
                     <h5 class="package-name mb-0">ياباني</h5>
                     <span class="final-price">14400¥</span>
                 </div>
+                <div class="package-details">
+                    <span class="package-feature">سرعة عالية</span>
+                    <span class="package-feature">لا حدود للاستخدام</span>
+                </div>
                 <div class="mobile-footer">
-                    <span class="price-sdg">360,000 SDG</span>
-                    <a href="https://api.whatsapp.com/send?phone=0115033393&amp;text=أريد%20شراء%20باقة%20ياباني" class="btn btn-select">اختر الباقة</a>
+                    <span class="price-sdg">370,000 SDG</span>
+                    <a href="https://api.whatsapp.com/send?phone=249969661277&amp;text=أريد%20شراء%20باقة%20ياباني" class="btn btn-select">اختر الباقة</a>
                 </div>
             </div>
         </div>
 
         <!-- قسم لماذا تختارنا -->
         <div class="why-us">
-            <h3 class="why-us-header">لماذا تختار PurplePay؟</h3>
-            
-            <div class="benefit-item">
-                <div class="benefit-icon">
-                    <i class="fas fa-headset fa-lg"></i>
-                </div>
-                <div class="benefit-text">
-                    <h5>دعم فني متواصل</h5>
-                    <p class="mb-0">نحن نوفر دعمًا فنيًا على مدار الساعة طوال أيام الأسبوع لحل أي مشكلة تواجهك</p>
-                </div>
-            </div>
+            <h3 class="why-us-header">لماذا تختارنا؟</h3>
             
             <div class="benefit-item">
                 <div class="benefit-icon">
@@ -790,6 +721,16 @@
                 <div class="benefit-text">
                     <h5>أسعار تنافسية</h5>
                     <p class="mb-0">نوفر لك أفضل الأسعار في السوق مع عروض خاصة دائمة</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-headset fa-lg"></i>
+                </div>
+                <div class="benefit-text">
+                    <h5>دعم فني متواصل</h5>
+                    <p class="mb-0">فريق دعم فني متاح على مدار الساعة لمساعدتك في أي وقت</p>
                 </div>
             </div>
         </div>
@@ -837,6 +778,19 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            هل يمكنني تجديد الباقة قبل انتهائها؟
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            نعم، يمكنك تجديد الباقة في أي وقت قبل انتهائها، وسيتم إضافة المدة الجديدة إلى المدة المتبقية.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -846,7 +800,7 @@
                 <i class="fas fa-info-circle fa-2x me-3 align-self-start"></i>
                 <div>
                     <h5>ملاحظة مهمة</h5>
-                    <p class="mb-0">يوجد خصم إضافي عند تجديد 3 أجهزة أو أكثر في نفس الوقت. للاستفسار اتصل بنا على الواتساب.</p>
+                    <p class="mb-0">يوجد خصم إضافي عند تجديد جهازين او اكتر </p>
                 </div>
             </div>
         </div>
@@ -854,7 +808,7 @@
         <!-- زر الاتصال -->
         <div class="fixed-bottom p-3">
             <div class="d-flex justify-content-center">
-                <a href="https://api.whatsapp.com/send?phone=0115033393" class="btn btn-success btn-lg rounded-pill shadow">
+                <a href="https://api.whatsapp.com/send?phone=249969661277" class="btn btn-success btn-lg rounded-pill shadow">
                     <i class="fab fa-whatsapp me-2"></i> اتصل بنا على الواتساب
                 </a>
             </div>
@@ -868,65 +822,33 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // عداد التنازلي
-        function updateCountdown() {
-            const promoEndDate = '2025-09-09'; 
-            const promoEnd = new Date(promoEndDate + 'T23:59:59'); 
-            
-            const now = new Date();
-            
-            const difference = promoEnd - now;
-            
-            if (difference <= 0) {
-                document.querySelector('.countdown-timer').innerHTML = `
-                    <div class="text-center">
-                        <h5 class="mb-0">انتهى العرض الترويجي</h5>
-                    </div>
-                `;
-                return;
+        // زر العودة للأعلى
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
             }
-            
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-            
-            document.querySelector('.days').textContent = days.toString().padStart(2, '0');
-            document.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
-            document.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
-            document.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-
-        // تحديث العداد كل ثانية
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // التشغيل الأولي
-
-        // إضافة تأثير عند التمرير للبطاقات
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.mobile-card');
-            cards.forEach(card => {
-                card.addEventListener('click', function() {
-                    this.classList.add('active');
-                    setTimeout(() => {
-                        this.classList.remove('active');
-                    }, 300);
-                });
-            });
-            
-            // زر العودة للأعلى
-            const backToTopButton = document.querySelector('.back-to-top');
-            
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('show');
-                } else {
-                    backToTopButton.classList.remove('show');
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // إضافة تأثير النقر على البطاقات
+        const cards = document.querySelectorAll('.mobile-card');
+        cards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                // تجنب تنفيذ النقر إذا تم النقر على زر الاختيار
+                if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+                    const link = this.querySelector('a.btn-select');
+                    if (link) {
+                        link.click();
+                    }
                 }
-            });
-            
-            backToTopButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
     </script>
